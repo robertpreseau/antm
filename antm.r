@@ -38,19 +38,12 @@ url <- 'https://en.wikipedia.org/wiki/America%27s_Next_Top_Model_(season_1)'
 webpage <- read_html(url)
 
 #Using this tutorial https://www.freecodecamp.org/news/an-introduction-to-web-scraping-using-r-40284110c848/
+#extract the HTML element we want to retrieve data from
 table <- html_table(html_nodes(webpage, xpath='//*[@id="mw-content-text"]/div/table[3]'))
-
-
-table[1][,1]
-
-
 
 #Pull out useful columns
 contestant <- as.character(data.frame(table[1])[,1])
 finish <- as.integer(data.frame(table[1])[,6])
-
-
-
 
 
 #Create dataframe from intermediate columns
