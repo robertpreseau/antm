@@ -1,1 +1,5 @@
-# antm
+# ANTM
+
+This is a silly little project related to America's Next Top Model, my quarantine guilty pleasure show.  I was able to use the rvest to scrape the data from Wikipedia and gganimate to create the animation.
+
+![America's Next Top Model Season 1 Results](s1.gif)
