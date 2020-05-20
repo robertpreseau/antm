@@ -1,7 +1,7 @@
 ## STANDARD SETUP #########################################################################
 
 #Create list of required packages
-list.of.packages <- c('purrr', 'dplyr', 'rvest', 'stringr', 'ggplot2', 'gganimate', 'gifski')
+list.of.packages <- c('dplyr', 'rvest', 'ggplot2', 'gganimate')
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 
 #Install missing packages
@@ -9,12 +9,12 @@ if(length(new.packages)) install.packages(new.packages)
 
 #Load packages
 library('dplyr')
-library('purrr')
 library('rvest')
-library('stringr')
 library('ggplot2')
 library('gganimate')
-library('gifski')
+#library('purrr')
+#library('gifski')
+#library('stringr')
 
 
 #Clear out environment variables
@@ -24,7 +24,6 @@ rm(list=ls())
 set.seed(1738)
 
 #Set working directory
-setwd('C:\\Users\\Robert Preseau\\OneDrive\\Projects\\antm')
 
 #clear Plots pane
 if(!is.null(dev.list())) dev.off() 
